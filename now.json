@@ -1,0 +1,10 @@
+{
+  "features": {
+    "cloud": "v2"
+  },
+  "alias": "paul.chitacan.io",
+  "env": {
+    "ID": "@paul-bassett-id",
+    "PW": "@paul-bassett-pw"
+  }
+}

@@ -1,0 +1,7 @@
+<div class="jumbotron">
+  <h2>☕️ 오늘도 폴 바셋??</h2>
+  <%= for card <- cards(@conn) do %>
+    <img width="400" src="<%= card.img %>"/>
+    <p class="lead"><%= card.amount %> 원</p>
+  <% end %>
+</div>
