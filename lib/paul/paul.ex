@@ -44,9 +44,10 @@ defmodule Paul.Api do
     headers = ["Cookie": cookie]
     case Api.post("/card.do", body, headers) do
       {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
-        %{"List" => cards} = body
-        Enum.map(cards, fn %{"cardId" => id, "imageUrl" => img, "balanceAmt" => amount} -> 
-          %Card{id: id, img: Api.url <> img, amount: String.to_integer(amount)}
+        body
+        |> Map.get("List")
+        |> Enum.map(fn %{"cardId" => id, "imageUrl" => img, "balanceAmt" => amount} ->
+          %Card{id: id, img: Api.url() <> img, amount: String.to_integer(amount)}
         end)
       {:ok, %HTTPoison.Response{status_code: 404}} -> "404 not found"
       {:error, %HTTPoison.Error{reason: reason}} -> reason
