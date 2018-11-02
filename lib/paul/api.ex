@@ -10,10 +10,10 @@ defmodule Paul.Api.Base do
   end
 
   def process_request_headers(headers) do
-    Enum.into(headers, ["Content-Type": "application/x-www-form-urlencoded"])
+    Enum.into(headers, "Content-Type": "application/x-www-form-urlencoded")
   end
 
   def process_response_body(body) do
-    body |> Poison.decode!
+    body |> Poison.decode!()
   end
 end

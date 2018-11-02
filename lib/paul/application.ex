@@ -9,7 +9,7 @@ defmodule Paul.Application do
     # Define workers and child supervisors to be supervised
     children = [
       # Start the endpoint when the application starts
-      supervisor(PaulWeb.Endpoint, []),
+      supervisor(PaulWeb.Endpoint, [])
       # Start your own worker by calling: Paul.Worker.start_link(arg1, arg2, arg3)
       # worker(Paul.Worker, [arg1, arg2, arg3]),
     ]

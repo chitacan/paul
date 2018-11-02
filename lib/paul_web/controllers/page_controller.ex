@@ -8,6 +8,6 @@ defmodule PaulWeb.PageController do
     pw = System.get_env("PW") || raise "expected the PW env variable to be set"
     login = Api.login(id, pw)
     cards = Api.get_cards(login)
-    render conn, "index.html", cards: cards
+    render(conn, "index.html", cards: cards)
   end
 end
