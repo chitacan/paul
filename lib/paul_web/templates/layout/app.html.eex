@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="chitacan">
 
     <title></title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
@@ -19,7 +18,7 @@
           </div>
           <div class="navbar-collapse">
             <p class="navbar-text navbar-right">
-              <a href="https://github.com/chitacan/paul/issues">💸 충전요청</a>
+              <a href="https://github.com/chitacan/paul/issues/new">💸 충전요청</a>
             </p>
           </div>
         </div>
